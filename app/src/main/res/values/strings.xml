@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Ramfos</string>
+    <string name="hello">Welcome to my application</string>
+    <string name="age">Enter age</string>
+    <string name="god">Year</string>
+    <string name="mes">month</string>
+    <string name="next">Next</string>
+
+
+
+    <!-- Training -->
+    <string name="training">Training</string>
+    <string name="training_text">1</string>
+    <!-- Training -->
+
+
+    <!-- Cages -->
+    <string name="cage">Cage</string>
+    <string name="cage_text">1</string>
+    <!-- Cages -->
+
+
+    <!-- Game -->
+    <string name="game">1</string>
+    <string name="game_text">1</string>
+    <!-- Game -->
+
+
+    <!-- Speak -->
+    <string name="speak">Speak</string>
+    <string name="speak_text">1</string>
+    <!-- Speak -->
+
+
+    <!-- Korm -->
+    <string name="korm">Eat</string>
+    <string name="korm_text">1</string>
+
+    <string name="test_korm">TEST</string>
+    <!-- Korm -->
+
+
+    <!-- Health -->
+    <string name="healpth">healpth</string>
+    <!-- Health -->
+
+
+    <!-- Timer -->
+    <string name="timer_h5">5 hours</string>
+    <string name="timer_h4">4 hours</string>
+    <string name="timer_h3">3 hours</string>
+    <string name="timer_h2">2 hours</string>
+    <string name="timer_h1">1 hour</string>
+    <string name="timer_m30">30 minutes</string>
+    <string name="timer_m0">eat!!!</string>
+    <!-- Timer -->
+
+
+    <!-- Menu -->
+    <string name="Home">menu_home</string>
+    <string name="Info">menu_info</string>
+    <string name="Chat">menu_chat</string>
+    <string name="Gallery">menu_gallery</string>
+    <string name="Settings">menu_settings</string>
+    <string name="Privet"> welcomes you to her gallery!</string>
+    <!-- Menu -->
+
+    <!-- Виды попугаев -->
+    <string name="type_budgies">Budgies</string>
+    <string name="tape_corella">Corella</string>
+    <string name="tape_jacko">Jacko</string>
+    <string name="tape_aratinga">Aratinga</string>
+    <string name="tape_cockatoo">Cockatoo</string>
+    <string name="tape_ara">Ara</string>
+    <string name="tape_amazon">Amazon</string>
+    <string name="tape_sinegal">Sinegal</string>
+    <string name="tape_kalita">Kalita</string>
+    <string name="tape_guzo">Guzo</string>
+
+    <string name="type_kakapo">Kakapo</string>
+    <!-- Виды попугаев -->
+
+
+    <!-- Menu -->
+
+    <string name="korm_chat">I\'m hungry</string>
+    <string name="home_tests">Tests</string>
+    <string name="tap">pokormit</string>
+    <string name="news">News</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="interesting">Interisting</string>
+    <string name="giveFood">give food</string>
+    <string name="giveVitamins">give vitamins</string>
+    <string name="giveWater">give water</string>
+    <string name="hunger">hunger</string>
+    <string name="vitamins">vitamins</string>
+    <string name="thirst">thirst</string>
+    <string name="health">health</string>
+    <string name="happiness">happiness</string>
+    <string name="health_text">1</string>
+
+</resources>

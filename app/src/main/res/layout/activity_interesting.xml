@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="Какапо или совиный попугай"
+                tools:ignore="MissingConstraints">
+            </TextView>
+            <ImageView
+                android:layout_width="@dimen/size_parrot_width"
+                android:layout_height="680px"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@drawable/kakapo">
+            </ImageView>
+            <TextView
+                style="@style/HomeTextStyle"
+                android:text="@string/type_kakapo">
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

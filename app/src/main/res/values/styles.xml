@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ParrotsTextStyle">
+        <item name="android:layout_width">@dimen/size_parrot_width</item>
+        <item name="android:layout_height">@dimen/size_parrot_height</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="HomeTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:lineSpacingExtra">1mm</item>
+    </style>
+
+    <style name="HeaderTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="myParrotStyle">
+        <item name="android:layout_width">@dimen/myParrot_table_width</item>
+        <item name="android:layout_height">@dimen/myParrot_table_height</item>
+        <item name="android:textSize"> 10dp </item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="RelativeLayoutStyle">
+        <item name="android:layout_width">@dimen/RelativeLayout_width</item>
+        <item name="android:layout_height">@dimen/RelativeLayout_height</item>
+    </style>
+
+    <style name="PrsIconStyle">
+        <item name="android:layout_width">@dimen/prs_icons_width</item>
+        <item name="android:layout_height">@dimen/prs_icons_height</item>
+    </style>
+
+    <style name="MenuIconStyle">
+        <item name="android:layout_width">@dimen/menu_icons_width</item>
+        <item name="android:layout_height">@dimen/menu_icons_height</item>
+        <item name="android:layout_marginTop">@dimen/menu_icons_LMTop</item>
+    </style>
+
+    <style name="GiveEatButtonStyle">
+        <item name="android:layout_height">@dimen/giveButton_height</item>
+        <item name="android:layout_width">@dimen/giveButton_width</item>
+
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

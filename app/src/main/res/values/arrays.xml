@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_ParrotHeader">
+        <item>Волнистые попугаи</item>
+        <item>Корелла</item>
+        <item>Жако</item>
+        <item>Аратинга</item>
+        <item>Какаду</item>
+        <item>Ара</item>
+        <item>Амазон</item>
+        <item>Сенегальский длиннокрылый</item>
+        <item>Калита или ропугай монах</item>
+        <item>Красногузый попугай</item>
+    </string-array>
+
+    <string-array name="array_ParrotText">
+        <item>@string/type_budgies</item>
+        <item>@string/tape_corella</item>
+        <item>@string/tape_jacko</item>
+        <item>@string/tape_aratinga</item>
+        <item>@string/tape_cockatoo</item>
+        <item>@string/tape_ara</item>
+        <item>@string/tape_amazon</item>
+        <item>@string/tape_sinegal</item>
+        <item>@string/tape_kalita</item>
+        <item>@string/tape_guzo</item>
+    </string-array>
+
+</resources>

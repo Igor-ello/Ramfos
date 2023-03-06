@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="Настройки">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Выберите сезон:">
+                </TextView>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAutumn"
+                        android:text="осень"
+                        style="@style/TextStyle">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonWinter"
+                        android:text="зима"
+                        style="@style/TextStyle">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSpring"
+                        android:text="весна"
+                        style="@style/TextStyle">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSummer"
+                        android:text="лето"
+                        style="@style/TextStyle">
+                    </RadioButton>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/TextStyle"
+                    android:text="Изменть имя попугая:">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/changeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:width="150dp"
+                    android:textColor="@color/text_color">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/TextStyle"
+                    android:text="Изменть возраст попугая:">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/changeGod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="@color/text_color">
+                </com.google.android.material.textfield.TextInputEditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:layout_gravity="center"></Button>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

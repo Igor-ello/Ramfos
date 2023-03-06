@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info"
+    android:background="@color/background">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="20dp"
+                android:foreground="@drawable/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/budgies"
+                style="@style/ParrotsTextStyle"
+                android:text="Волнистые\n   попугаи"
+                android:paddingLeft="220dp"
+                android:background="@drawable/budgerigar_img">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/corella"
+                style="@style/ParrotsTextStyle"
+                android:text="Корелла"
+                android:paddingLeft="250dp"
+                android:background="@drawable/corella_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/jacko"
+                style="@style/ParrotsTextStyle"
+                android:text="Жако"
+                android:paddingLeft="265dp"
+                android:background="@drawable/jacko_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/aratinga"
+                style="@style/ParrotsTextStyle"
+                android:text="Аратинга"
+                android:paddingLeft="240dp"
+                android:background="@drawable/aratinga_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/cockatoo"
+                style="@style/ParrotsTextStyle"
+                android:text="Какаду"
+                android:paddingLeft="245dp"
+                android:background="@drawable/cockatoo_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/ara"
+                style="@style/ParrotsTextStyle"
+                android:text="Ара"
+                android:paddingLeft="245dp"
+                android:background="@drawable/ara_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/amazon"
+                style="@style/ParrotsTextStyle"
+                android:text="Амазон"
+                android:paddingLeft="245dp"
+                android:background="@drawable/amazon_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/sinegal"
+                style="@style/ParrotsTextStyle"
+                android:text="Синегал"
+                android:paddingLeft="245dp"
+                android:background="@drawable/sinegal_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/kalita"
+                style="@style/ParrotsTextStyle"
+                android:text="Калита"
+                android:paddingLeft="245dp"
+                android:background="@drawable/kalita_img">
+            </TextView>
+
+            <TextView
+                android:id="@+id/guzo"
+                style="@style/ParrotsTextStyle"
+                android:text="Красногузый"
+                android:paddingLeft="220dp"
+                android:background="@drawable/guzo_img">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="80dp">
+            </TextView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

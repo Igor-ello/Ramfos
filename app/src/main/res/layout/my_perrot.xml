@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spring">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="30dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="27dp"
+        android:background="@drawable/logo2">
+    </ImageView>
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/PrsIconStyle"
+            android:background='@drawable/water'>
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_water"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/RelativeLayout_width"
+            android:layout_height="@dimen/RelativeLayout_height">
+        </ProgressBar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            style="@style/PrsIconStyle"
+            android:background="@drawable/food">
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_food"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/RelativeLayout_width"
+            android:layout_height="@dimen/RelativeLayout_height">
+        </ProgressBar>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            style="@style/PrsIconStyle"
+            android:background="@drawable/vitamins">
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_vitamins"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/RelativeLayout_width"
+            android:layout_height="@dimen/RelativeLayout_height">
+        </ProgressBar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            style="@style/PrsIconStyle"
+            android:background="@drawable/health">
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_health"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/RelativeLayout_width"
+            android:layout_height="@dimen/RelativeLayout_height">
+        </ProgressBar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            style="@style/PrsIconStyle"
+            android:background="@drawable/happiness">
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_happiness"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/RelativeLayout_width"
+            android:layout_height="@dimen/RelativeLayout_height">
+        </ProgressBar>
+    </LinearLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/cageInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="220dp"
+    android:layout_marginTop="100dp">
+
+    <LinearLayout
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:background="@drawable/background_feeder_one"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кормушка"
+                android:textColor="@color/text_color"
+                android:textStyle="bold">
+            </TextView>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/updateFeeder"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/eye">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                style="@style/PrsIconStyle"
+                android:background="@drawable/water"
+                android:textColor="@color/white">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/PrsIconStyle"
+                android:background="@drawable/food"
+                android:textColor="@color/white">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/PrsIconStyle"
+                android:background="@drawable/vitamins"
+                android:textColor="@color/white">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textVitamins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:background="@drawable/background_feeder_two"
+        android:layout_marginTop="60dp">
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="end"
+    android:layout_marginTop="105dp">
+
+    <ImageView
+        android:id="@+id/cages"
+        style="@style/MenuIconStyle"
+        android:background="@drawable/cages">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/feeder"
+        style="@style/MenuIconStyle"
+        android:background="@drawable/feeder">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/parrots"
+        style="@style/MenuIconStyle"
+        android:background="@drawable/parrots">
+    </ImageView>
+
+    <Button
+        android:id="@+id/saveValue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_media_ff">
+    </Button>
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_info_24">
+    </Button>
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_settings_24">
+    </Button>
+
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="250dp"
+    android:layout_marginBottom="75dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тип попугая:"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/typeParrot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя попугая:"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/nameParrot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/parrotImage"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/budgerigar">
+        </ImageView>
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/putFood"
+            style="@style/GiveEatButtonStyle"
+            android:background="@drawable/add_food_img"
+            android:text="@string/giveFood">
+        </TextView>
+
+        <TextView
+            android:id="@+id/putWater"
+            style="@style/GiveEatButtonStyle"
+            android:layout_marginStart="@dimen/giveButton_LMLeft"
+            android:background="@drawable/add_water_img"
+            android:text="@string/giveWater">
+        </TextView>
+
+        <TextView
+            android:id="@+id/putVitamins"
+            style="@style/GiveEatButtonStyle"
+            android:layout_marginStart="@dimen/giveButton_LMLeft"
+            android:background="@drawable/add_vitamins_img"
+            android:text="@string/giveVitamins">
+        </TextView>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
