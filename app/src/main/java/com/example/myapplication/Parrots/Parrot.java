@@ -141,6 +141,8 @@ public abstract class Parrot {
             parrot.setHealth(parrot.getHealth() - subtractHealth);
         }
         vitamins(parrot);
+
+        System.out.println("Операция: попугай поел");
     }
 
     public void drink(Parrot parrot){
@@ -154,6 +156,8 @@ public abstract class Parrot {
             parrot.setHealth(parrot.getHealth() - subtractHealth);
         }
         vitamins(parrot);
+
+        System.out.println("Операция: попугай попил");
     }
 
 

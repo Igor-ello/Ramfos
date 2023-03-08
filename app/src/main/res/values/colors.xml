@@ -16,9 +16,11 @@
     <color name="orange">#FF5722</color>
     <color name="yellow">#FFEB3B</color>
 
-    <color name="pg_1">#808080</color>
-    <color name="pg_2">#3f3f3f</color>
-    <color name="pg_3">#191919</color>
+
+    <color name="pg_1">#CACACA</color>
+    <color name="pg_2">#9A9A9A</color>
+    <color name="pg_3">#717171</color>
+
     <color name="pg_4">#FFEB3B</color>
     <color name="pg_5">#4CAF50</color>
     <color name="pg_6">#FF1100</color>

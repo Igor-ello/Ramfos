@@ -68,7 +68,7 @@ public class Main extends AppCompatActivity {
         initTime();
         initTimeOld();
         initTimeSkip();
-        System.out.println(getTimeDifference());
+
         dayThread = new DayThread(1000);
         dayThread.start();
 
@@ -179,10 +179,17 @@ public class Main extends AppCompatActivity {
     }
 
     public void initTimeSkip(){
-        int must = day * 3600 + hour * 60 + min;
-        int must_old = day_old * 3600 + hour_old * 60 + min_old;
-        int k = must - must_old;
-        System.out.println(k);
+        int must = day * 24 * 60 + hour * 60 + min;
+        int must_old = day_old * 24 * 60 + hour_old * 60 + min_old;
+        int dateDifference = must - must_old;
+        System.out.println("Время в минутах: " + must + " Время: "+ day + " " + hour + " " + min);
+        System.out.println("Время в минутах: " + must_old + " Время: "+ day_old+ " " + hour_old + " " + min_old);
+        if ((dateDifference / (24 * 60)) > 3){
+            System.out.println("ПОПУГАЙ НЕ ВЫЖИЛ ");
+        }
+        else {
+            //TODO
+        }
     }
     public int getTimeDifference(){
         return (min - min_old) * 60000;
@@ -192,7 +199,7 @@ public class Main extends AppCompatActivity {
     public void initTime(){
         SimpleDateFormat date = new SimpleDateFormat();
 
-        date = new SimpleDateFormat("MM");
+        date = new SimpleDateFormat("dd");
         day = Integer.parseInt(date.format(new Date()));
 
         date = new SimpleDateFormat("HH");

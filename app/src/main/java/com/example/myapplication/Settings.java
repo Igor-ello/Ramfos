@@ -82,7 +82,6 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-
         Button buttonSave = findViewById(R.id.button_save);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override

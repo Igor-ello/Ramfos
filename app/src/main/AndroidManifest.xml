@@ -35,9 +35,6 @@
             android:name=".recycling.Training"
             android:exported="true" />
         <activity
-            android:name=".recycling.Gallery"
-            android:exported="true" />
-        <activity
             android:name=".recycling.Home"
             android:exported="true" />
         <activity

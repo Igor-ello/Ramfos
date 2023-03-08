@@ -119,68 +119,9 @@ public class Home extends AppCompatActivity {
             }
         });
 
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.icon_menu);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        break;
-                    case R.id.navigation_info:
-                        infoActivity();
-                        break;
-                    case R.id.navigation_chat:
-                        chatActivity();
-                        break;
-                    case R.id.navigation_gallery:
-                        galleryActivity();
-                        break;
-                    case R.id.navigation_settings:
-                        myParrot();
-                        break;
-                }
-                    return true;
-            };
-        });
-
-
-
-
-
     }
 
-    public void homeActivity(){
-        Intent intent = new Intent(this, Home.class);
-        startActivity(intent);
-    }
 
-    public void infoActivity(){
-        Intent intent = new Intent(this, Info.class);
-        startActivity(intent);
-    }
-
-    public void chatActivity(){
-        Intent intent = new Intent(this, Chat.class);
-        startActivity(intent);
-    }
-
-    public void galleryActivity(){
-        Intent intent = new Intent(this, Gallery.class);
-        intent.putExtra("NAME", name);
-        startActivity(intent);
-    }
-
-    public void settingsActivity(){
-        Intent intent = new Intent(this, Settings.class);
-        startActivity(intent);
-    }
-
-    public void myParrot(){
-        Intent intent = new Intent(this, Main.class);
-        startActivity(intent);
-    }
 
     final Random random = new Random();
 
