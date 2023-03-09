@@ -63,7 +63,6 @@ public class Time extends AppCompatActivity {
     }
 
     public static void initTimeLast(){
-
         SharedPreferences sharedPref = getInstance().getSharedPreferences("Time", Context.MODE_PRIVATE);
         String defaultValue = "0";
         dayLast = Integer.parseInt(sharedPref.getString("dayLast", defaultValue));
