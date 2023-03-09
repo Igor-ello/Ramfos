@@ -1,5 +1,10 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.Time.initTime;
+import static com.example.myapplication.Time.initTimeLast;
+import static com.example.myapplication.Time.initTimeSkip;
+import static com.example.myapplication.Time.saveTime;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -19,22 +24,11 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.example.myapplication.Parrots.Parrot;
 import com.example.myapplication.Threads.DayThread;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Main extends AppCompatActivity {
     static Parrot parrot;
     static Cage cage = Data.cage;
     public static Thread dayThread;
     int season;
-
-    private int day;
-    private int hour;
-    private int min;
-
-    private int day_old;
-    private int hour_old;
-    private int min_old;
 
     private static TextView textWater;
     private static TextView textFood;
@@ -66,7 +60,7 @@ public class Main extends AppCompatActivity {
         layout.setBackgroundResource(Data.seasons[season]);
 
         initTime();
-        initTimeOld();
+        initTimeLast();
         initTimeSkip();
 
         dayThread = new DayThread(1000);
@@ -86,11 +80,11 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        Button saveValue = findViewById(R.id.saveValue);
+        Button saveValue = findViewById(R.id.saveTime);
         saveValue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveValue();
+                saveTime();
             }
         });
 
@@ -171,67 +165,12 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 initTime();
-                initTimeOld();
+                initTimeLast();
                 initTimeSkip();
             }
         });
 
     }
-
-    public void initTimeSkip(){
-        int must = day * 24 * 60 + hour * 60 + min;
-        int must_old = day_old * 24 * 60 + hour_old * 60 + min_old;
-        int dateDifference = must - must_old;
-        System.out.println("Время в минутах: " + must + " Время: "+ day + " " + hour + " " + min);
-        System.out.println("Время в минутах: " + must_old + " Время: "+ day_old+ " " + hour_old + " " + min_old);
-        if ((dateDifference / (24 * 60)) > 3){
-            System.out.println("ПОПУГАЙ НЕ ВЫЖИЛ ");
-        }
-        else {
-            //TODO
-        }
-    }
-    public int getTimeDifference(){
-        return (min - min_old) * 60000;
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    public void initTime(){
-        SimpleDateFormat date = new SimpleDateFormat();
-
-        date = new SimpleDateFormat("dd");
-        day = Integer.parseInt(date.format(new Date()));
-
-        date = new SimpleDateFormat("HH");
-        hour = Integer.parseInt(date.format(new Date()));
-
-        date = new SimpleDateFormat("mm");
-        min = Integer.parseInt(date.format(new Date()));
-    }
-
-    public void initTimeOld(){
-        SharedPreferences sharedPref = getSharedPreferences("Main", Context.MODE_PRIVATE);
-        String defaultValue = "0";
-        day_old = Integer.parseInt(sharedPref.getString("day_old", defaultValue));
-        hour_old = Integer.parseInt(sharedPref.getString("hour_old", defaultValue));
-        min_old = Integer.parseInt(sharedPref.getString("min_old", defaultValue));
-    }
-
-    public void saveValue(){
-        day_old = day;
-        hour_old = hour;
-        min_old = min;
-
-        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("day_old", String.valueOf(day_old));
-        editor.putString("hour_old", String.valueOf(hour_old));
-        editor.putString("min_old", String.valueOf(min_old));
-        editor.apply();
-
-        System.out.println("Значения сохранены!");
-    }
-
 
     @SuppressLint("SetTextI18n")
     public static void updateTextView(){
@@ -254,7 +193,7 @@ public class Main extends AppCompatActivity {
     private void initPrsBar() {
         prsBarWater = findViewById(R.id.progress_water);
         prsBarFood = findViewById(R.id.progress_food);
-    prsBarVitamins = findViewById(R.id.progress_vitamins);
+        prsBarVitamins = findViewById(R.id.progress_vitamins);
         prsBarHeath = findViewById(R.id.progress_health);
         prsBarHappiness = findViewById(R.id.progress_happiness);
     }

@@ -61,4 +61,5 @@ public class DayThread extends Thread{
             Main.updatePrsBar();
         }
     }
+
 }

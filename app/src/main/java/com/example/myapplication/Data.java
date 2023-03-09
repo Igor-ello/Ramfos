@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 import com.example.myapplication.Parrots.Jacko;
 import com.example.myapplication.Parrots.Budgerigar;
 import com.example.myapplication.Parrots.Corella;
@@ -12,6 +15,7 @@ import java.util.List;
 
 public class Data {
     Data(){}
+
     public static int maxScore = 14;
 
     public static HashMap<Integer, Parrot> parrotHashMap = getParrots();

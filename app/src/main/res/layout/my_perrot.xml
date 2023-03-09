@@ -278,7 +278,7 @@
     </ImageView>
 
     <Button
-        android:id="@+id/saveValue"
+        android:id="@+id/saveTime"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_media_ff">
