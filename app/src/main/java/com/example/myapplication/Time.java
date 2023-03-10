@@ -15,18 +15,8 @@ import java.util.Date;
 public class Time extends AppCompatActivity {
     public static Time uniqueTime;
 
-    public static final String APP_PREFERENCES = "settings";
-    public static final String APP_PREFERENCES_DAY = "day";
-    public static final String APP_PREFERENCES_DAY_LAST = "dayLast";
-    public static final String APP_PREFERENCES_HOUR = "hour";
-    public static final String APP_PREFERENCES_HOUR_LAST = "hourLast";
-    public static final String APP_PREFERENCES_MINUTES = "minutes";
-    public static final String APP_PREFERENCES_MINUTES_LAST = "minutesLast";
-    public static SharedPreferences mSettings;
-
-
     @SuppressLint("SimpleDateFormat")
-    static SimpleDateFormat date = new SimpleDateFormat();
+    private static SimpleDateFormat date = new SimpleDateFormat();
 
     private static int day;
     private static int hour;
@@ -62,23 +52,20 @@ public class Time extends AppCompatActivity {
         time = valuesToTime(day, hour, minutes);
     }
 
-    public static void initTimeLast(){
-
-        SharedPreferences sharedPref = getInstance().getSharedPreferences("Time", Context.MODE_PRIVATE);
+    public static void initTimeLast(SharedPreferences sharedPreferences){
         String defaultValue = "0";
-        dayLast = Integer.parseInt(sharedPref.getString("dayLast", defaultValue));
-        hourLast = Integer.parseInt(sharedPref.getString("hourLast", defaultValue));
-        minutesLast = Integer.parseInt(sharedPref.getString("minutesLast", defaultValue));
-        timeLast = Integer.parseInt(sharedPref.getString("timeLast", defaultValue));
+        dayLast = Integer.parseInt(sharedPreferences.getString("dayLast", defaultValue));
+        hourLast = Integer.parseInt(sharedPreferences.getString("hourLast", defaultValue));
+        minutesLast = Integer.parseInt(sharedPreferences.getString("minutesLast", defaultValue));
+        timeLast = Integer.parseInt(sharedPreferences.getString("timeLast", defaultValue));
     }
 
-    public static void saveTime(){
+    public static void saveTime(SharedPreferences sharedPreferences){
         dayLast = day;
         hourLast = hour;
         minutesLast = minutes;
         timeLast = valuesToTime(day, hour, minutes);
 
-        SharedPreferences sharedPreferences = getInstance().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("dayLast", String.valueOf(dayLast));
         editor.putString("hourLast", String.valueOf(hourLast));
@@ -91,8 +78,8 @@ public class Time extends AppCompatActivity {
 
     public static void initTimeSkip(){
         int timeDifference = time - timeLast;
-        System.out.println("Время в минутах: " + time + " Время: день "+ day + ", час " + hour + ", минуты " + minutes);
-        System.out.println("Время в минутах: " + timeLast + " Время: день "+ dayLast+ ", час " + hourLast + ", минуты " + minutesLast);
+        System.out.println("Сейчас время в минутах: " + time + " Время: день "+ day + ", час " + hour + ", минуты " + minutes);
+        System.out.println("Старое время в минутах: " + timeLast + " Время: день "+ dayLast+ ", час " + hourLast + ", минуты " + minutesLast);
         if (day - dayLast >= 3){
             System.out.println("ПОПУГАЙ НЕ ВЫЖИЛ ");
         }

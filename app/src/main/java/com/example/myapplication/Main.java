@@ -27,6 +27,7 @@ import com.example.myapplication.Threads.DayThread;
 public class Main extends AppCompatActivity {
     static Parrot parrot;
     static Cage cage = Data.cage;
+    private static SharedPreferences sharedPreferences;
     public static Thread dayThread;
     int season;
 
@@ -49,18 +50,17 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_perrot);
+        sharedPreferences = getSharedPreferences("Main", Context.MODE_PRIVATE);
 
         initParrot();
 
         LinearLayout cageInfoTable = findViewById(R.id.cageInfo);
-        SharedPreferences sharedPref = getSharedPreferences("Main", Context.MODE_PRIVATE);
-
-        season = sharedPref.getInt("season", 0);
+        season = sharedPreferences.getInt("season", 0);
         CoordinatorLayout layout = findViewById(R.id.layout);
         layout.setBackgroundResource(Data.seasons[season]);
 
         initTime();
-        initTimeLast();
+        initTimeLast(sharedPreferences);
         initTimeSkip();
 
         dayThread = new DayThread(1000);
@@ -84,7 +84,7 @@ public class Main extends AppCompatActivity {
         saveValue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveTime();
+                saveTime(sharedPreferences);
             }
         });
 
@@ -165,7 +165,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 initTime();
-                initTimeLast();
+                initTimeLast(sharedPreferences);
                 initTimeSkip();
             }
         });
