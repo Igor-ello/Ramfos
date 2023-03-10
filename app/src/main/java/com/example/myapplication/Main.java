@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import static com.example.myapplication.Time.initTime;
 import static com.example.myapplication.Time.initTimeLast;
-import static com.example.myapplication.Time.initTimeSkip;
+import static com.example.myapplication.Time.timeSkip;
 import static com.example.myapplication.Time.saveTime;
 
 import android.annotation.SuppressLint;
@@ -61,7 +61,7 @@ public class Main extends AppCompatActivity {
 
         initTime();
         initTimeLast(sharedPreferences);
-        initTimeSkip();
+        timeSkip();
 
         dayThread = new DayThread(1000);
         dayThread.start();
@@ -166,7 +166,7 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
                 initTime();
                 initTimeLast(sharedPreferences);
-                initTimeSkip();
+                timeSkip();
             }
         });
 

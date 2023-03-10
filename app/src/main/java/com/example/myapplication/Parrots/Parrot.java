@@ -7,6 +7,7 @@ import static java.lang.Math.abs;
 
 import com.example.myapplication.Data;
 import com.example.myapplication.Threads.DayThread;
+import com.example.myapplication.Time;
 
 public abstract class Parrot {
     private final static int maxHunger = 100;
@@ -90,10 +91,10 @@ public abstract class Parrot {
         int score = DayThread.score;
         switch (param){
             case "eat":
-                grams = (int) Math.round(1.0 * parrot.getDayFood() * score / Data.maxScore);
+                grams = (int) Math.round(1.0 * parrot.getDayFood() * score / Time.getDayMaxScore());
                 break;
             case "drink":
-                grams = (int) Math.round(1.0 * parrot.getDayWater() * score / Data.maxScore);
+                grams = (int) Math.round(1.0 * parrot.getDayWater() * score / Time.getDayMaxScore());
                 break;
             default:
                 System.out.println("Внимание! не прввльня комманда " + param);
@@ -104,7 +105,7 @@ public abstract class Parrot {
     }
 
     public int scoreToPercent(int score){
-        return (int) Math.round(1.0 * 100 * score / Data.maxScore);
+        return (int) Math.round(1.0 * 100 * score / Time.getDayMaxScore());
     }
 
     public int gramsToPercent(String param, int grams){
@@ -131,6 +132,9 @@ public abstract class Parrot {
     }
 
     public void eat(Parrot parrot) {
+        //TODO проценты считаются относительно максимума т.е. отбавляются одновременно
+        // (2 относительно 10 и 1 относительно 5 нет разницы)
+
         int score = DayThread.score;
         parrot.setHungerTotal(scoreToPercent(score));                                   //сколько попугай съел за день
         parrot.setHunger(maxHunger + gramsToPercent("eat", cage.getFoodTotal())

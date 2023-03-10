@@ -17,6 +17,7 @@ public class Time extends AppCompatActivity {
 
     @SuppressLint("SimpleDateFormat")
     private static SimpleDateFormat date = new SimpleDateFormat();
+    private static int hourOld = 0;
 
     private static int day;
     private static int hour;
@@ -28,6 +29,8 @@ public class Time extends AppCompatActivity {
 
     private static int time;
     private static int timeLast;
+
+
 
     private Time() {}
 
@@ -76,21 +79,65 @@ public class Time extends AppCompatActivity {
         System.out.println("Значения сохранены!");
     }
 
-    public static void initTimeSkip(){
-        int timeDifference = time - timeLast;
+    public static int timeRun(){
+        initTime();
+        hourOld = 0;
+        int score = getScore(hour, hourOld);
+        hourOld = hour;
+        return score;
+
+    }
+
+    public static void timeSkip(){
         System.out.println("Сейчас время в минутах: " + time + " Время: день "+ day + ", час " + hour + ", минуты " + minutes);
         System.out.println("Старое время в минутах: " + timeLast + " Время: день "+ dayLast+ ", час " + hourLast + ", минуты " + minutesLast);
         if (day - dayLast >= 3){
             System.out.println("ПОПУГАЙ НЕ ВЫЖИЛ ");
+            //TODO что делать в это случае?
         }
         else {
-            //TODO
+            System.out.println("ПОПУГАЙ НЕ ДОЕЛ " + getScoreSkip() + " ОЧКОВ");
+            System.out.println("ДНЕВНОЙ МАКСИМУМ " + getDayMaxScore() + " ОЧКОВ");
         }
+    }
+
+    public static int getScore(int lastHour, int initialHour){
+        int score = 0;
+        for(int h = lastHour; h <= initialHour; h++) {
+            if (6 < h && h <= 8) {score += 1;}
+            if (8 < h && h <= 11) {score += 3;}
+            if (11 < h && h <= 18) {score += 1;}
+            if (18 < h && h <= 21) {score += 3;}
+        }
+        return score;
+    }
+    public static int getScoreSkip(){
+        return getScore(hourLast, hour) + (day - dayLast) * getDayMaxScore();
+    }
+
+    public static int getDayMaxScore(){
+        return getScore(0, 24);
     }
 
     public static int valuesToTime(int day, int hour, int min){
         return day * 24 * 60 + hour * 60 + min;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public int getDay() {
         return day;
@@ -107,14 +154,14 @@ public class Time extends AppCompatActivity {
     }
 
 
-    public int getHour() {
+    public static int getHour() {
         return hour;
     }
     public void setHour(int hour) {
         Time.hour = hour;
     }
 
-    public int getHourLast() {
+    public static int getHourLast() {
         return hourLast;
     }
     public void setHourLast(int hourLast) {

@@ -4,8 +4,8 @@ import com.example.myapplication.R;
 
 public class Budgerigar extends Parrot {
 //    Random random = new Random();
-    public final static int DAY_FOOD_CHANGE = 15;
-    public final static int DAY_WATER_CHANGE = 12;
+    public final static int DAY_FOOD = 15;
+    public final static int DAY_WATER = 12;
     private final static String TYPE = "Budgerigar";
     private final static int picture = R.drawable.budgerigar;
     private String name;
@@ -27,9 +27,9 @@ public class Budgerigar extends Parrot {
     }
 
     public int getDayFood(){
-        return DAY_FOOD_CHANGE;
+        return DAY_FOOD;
     }
     public int getDayWater(){
-        return DAY_WATER_CHANGE;
+        return DAY_WATER;
     }
 }

@@ -16,8 +16,6 @@ import java.util.List;
 public class Data {
     Data(){}
 
-    public static int maxScore = 14;
-
     public static HashMap<Integer, Parrot> parrotHashMap = getParrots();
     public static HashMap<Integer, Parrot> getParrots(){
         HashMap<Integer, Parrot> parrotList = new HashMap<>();
